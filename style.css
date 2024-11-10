@@ -1,0 +1,233 @@
+
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(-45deg, #2193b0, #6dd5ed, #5c7ce4, #3cb3cd);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+    overflow: hidden;
+}
+
+h1 {
+    color: #2d3748;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Container Styling */
+.container-box {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* Allow flex items to wrap */
+    max-width: 1200px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+}
+
+/* Left Box */
+.left-box {
+    flex: 2;
+    padding: 40px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://media3.giphy.com/media/G1T5M0qT6ZJlu/giphy.gif');
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.5s ease;
+}
+
+.weather-info h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.weather-info p {
+    font-size: 1.3rem;
+    margin: 5px 0;
+}
+
+/* Right Box */
+.right-box {
+    flex: 1;
+    padding: 40px;
+    background-color: #225394;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Search Box Container */
+.search-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.search-box input {
+    font-size: 1.2rem;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    flex: 1; /* Take remaining space */
+    transition: all 0.3s ease;
+}
+
+.search-box input:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.6);
+    border-color: #00d2ff;
+}
+
+.btn {
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-info {
+    background-color: #00d2ff;
+    color: white;
+}
+
+.btn-info:hover {
+    background-color: #009acd;
+}
+
+.btn-warning {
+    background-color: #ffcc00;
+    color: white;
+}
+
+.btn-warning:hover {
+    background-color: #e6b800;
+}
+
+.mt-3 h4 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.weather-details p {
+    font-size: 1.1rem;
+}
+
+.error-message {
+    color: red;
+}
+
+.weather-details span {
+    font-weight: 500;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+    .container-box {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .left-box {
+        flex: 1;
+        padding: 20px;
+        font-size: 1rem;
+    }
+
+    .right-box {
+        flex: 1;
+        padding: 20px;
+        font-size: 1rem;
+    }
+
+    .weather-info h1 {
+        font-size: 2rem;
+    }
+
+    .weather-info p {
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 8px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+    .container-box {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .left-box {
+        flex: 1;
+        padding: 25px;
+    }
+
+    .right-box {
+        flex: 1;
+        padding: 25px;
+    }
+
+    .weather-info h1 {
+        font-size: 2.5rem;
+    }
+
+    .weather-info p {
+        font-size: 1.3rem;
+    }
+
+    .btn {
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .left-box {
+        flex: 2;
+        padding: 40px;
+    }
+
+    .right-box {
+        flex: 1;
+        padding: 40px;
+    }
+
+    .weather-info h1 {
+        font-size: 3.5rem;
+    }
+
+    .weather-info p {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        font-size: 1.2rem;
+        padding: 12px;
+    }
+}
+
